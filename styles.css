@@ -1,0 +1,42 @@
+.pageLayout {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+img {
+    max-width: 100%;
+}
+.doctorList-item .card-title {
+    padding-right: 130px;
+}
+.doctorList-item-rate {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+.doctorList-item-rate {
+    font-size: 14px !important;
+}
+.doctorList-item-rate span,
+.doctorList-item-rate i {
+    display: inline-block;
+    vertical-align: middle;
+}
+.doctorList-item-rate i.material-icons {
+    font-size: 18px !important;
+}
+#map {
+    position: relative;
+    height: 300px;
+}
+
+@media screen and (min-width: 1024px){
+    #map {
+        height: 500px;
+    }
+}
+/*AIzaSyB8YZdLwCpE2aS6ks55Opn9oeTz_UNmFWI*/
