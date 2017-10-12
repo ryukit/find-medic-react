@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import DoctorList from './DoctorList';
 import MapComponent from './MapComponent';
+import SearchRefine from './SearchRefine';
+import AdComponent from './AdComponent';
 
 //Initialize Firebase
 var config = {
@@ -19,17 +21,18 @@ class App extends Component {
         super(props);
         this.state = {
             items: [],
+            banner: ""
         };
     }
 
     loadData() {
         const ref = new firebase.database().ref('medic-list/');
         ref.on('value', function(snapshot) {
-            var items = [];
+            const items = [];
             //var sorted = [];
 
             snapshot.forEach(function(itemSnap) {
-                var item = itemSnap.val();
+                const item = itemSnap.val();
                 //item.key = itemSnap.getKey();
                 //item.id = itemSnap.getKey();
                 items.push(item);
@@ -41,8 +44,22 @@ class App extends Component {
         }.bind(this));
     }
 
+    loadAd() {
+        const ref = new firebase.database().ref('main_ad/');
+        ref.on('value', function(snapshot) {
+            const banner = snapshot.val();
+
+            this.setState({
+                banner: banner
+            });
+            console.log(banner)
+        }.bind(this));
+    }
+
     componentDidMount() {
         this.loadData();
+        this.loadAd();
+        $('select').material_select();
     }
 
     // getInitialState() {
@@ -75,6 +92,14 @@ class App extends Component {
                                             <MapComponent items={this.state.items} />
                                         </div>
                                     </div>
+                                </div>
+                                <div className="card">
+                                    <div className="card-content">
+                                        <SearchRefine />
+                                    </div>
+                                </div>
+                                <div className="card">
+                                    <AdComponent banner={this.state.banner} />
                                 </div>
                             </div>
                             <div className="col s12 m8">

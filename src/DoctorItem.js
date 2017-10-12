@@ -24,7 +24,7 @@ class DoctorItem extends Component {
             stars_val = 'star star star star star_border'
         } else if (this.props.rate >= 4.5 && this.props.rate < 5) {
             stars_val = 'star star star star star_half'
-        } else if (this.props.rate = 5) {
+        } else if (this.props.rate == 5) {
             stars_val = 'star star star star star'
         }
 
