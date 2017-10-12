@@ -25,8 +25,13 @@ class App extends Component {
         };
     }
 
-    loadData() {
-        const ref = new firebase.database().ref('medic-list/');
+    loadData(a) {
+        let ref = '';
+        if ( a == 1 ){
+            ref = new firebase.database().ref('medic-list/');
+        }else if ( a == 2 ){
+            ref = new firebase.database().ref('medic-list/').orderByChild('type').equalTo('clinic');
+        }
         ref.on('value', function(snapshot) {
             const items = [];
             //var sorted = [];
@@ -52,12 +57,11 @@ class App extends Component {
             this.setState({
                 banner: banner
             });
-            console.log(banner)
         }.bind(this));
     }
 
     componentDidMount() {
-        this.loadData();
+        this.loadData(1);
         this.loadAd();
         $('select').material_select();
     }

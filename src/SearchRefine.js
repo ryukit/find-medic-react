@@ -36,6 +36,9 @@ class SearchRefine extends Component {
                         <label htmlFor="filled-in-box-4">Female</label>
                     </p>
                 </div>
+                <div className="formActions">
+                    <a className="waves-effect waves-light btn">button</a>
+                </div>
             </div>
         )
     }
