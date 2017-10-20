@@ -4,7 +4,7 @@ class DoctorItem extends Component {
 
     render() {
         let stars_val = '';
-        if (this.props.rate == 0) {
+        if (this.props.rate === 0) {
             stars_val = 'star_border star_border star_border star_border star_border'
         } else if (this.props.rate >= 0.5 && this.props.rate < 1) {
             stars_val = 'star_half star_border star_border star_border star_border'
@@ -24,7 +24,7 @@ class DoctorItem extends Component {
             stars_val = 'star star star star star_border'
         } else if (this.props.rate >= 4.5 && this.props.rate < 5) {
             stars_val = 'star star star star star_half'
-        } else if (this.props.rate == 5) {
+        } else if (this.props.rate === 5) {
             stars_val = 'star star star star star'
         }
 
