@@ -4,6 +4,16 @@ import DoctorList from './DoctorList';
 import MapComponent from './MapComponent';
 import SearchRefine from './SearchRefine';
 import AdComponent from './AdComponent';
+import ContactPage from './ContactForm';
+
+
+class ContactApp extends Component {
+  render() {
+    return(
+        <ContactPage />
+    )
+  }
+}
 
 //Initialize Firebase
 var config = {
@@ -86,6 +96,7 @@ class App extends Component {
                         </ul>
                     </div>
                 </nav>
+                <ContactApp />
                 <main className="mainContent">
                     <div className="container">
                         <div className="row">
