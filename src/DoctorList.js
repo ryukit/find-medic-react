@@ -12,6 +12,7 @@ class DoctorList extends Component {
                 desc={item.description}
                 rate={item.rate}
                 sex={item.sex}
+                type={item.type}
                 location={item.geo_point}
                 speciality={item.speciality}
                 image={item.featured_image}

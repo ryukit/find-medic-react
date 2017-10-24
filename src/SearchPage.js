@@ -5,17 +5,6 @@ import MapComponent from './MapComponent';
 import SearchRefine from './SearchRefine';
 import AdComponent from './AdComponent';
 
-//Initialize Firebase
-var config = {
-    apiKey: "AIzaSyBrAhKDmDKw-ADDNVEav-jiewM4ltxWXdM",
-    authDomain: "find-medic-test.firebaseapp.com",
-    databaseURL: "https://find-medic-test.firebaseio.com",
-    projectId: "find-medic-test",
-    storageBucket: "find-medic-test.appspot.com",
-    messagingSenderId: "42124904796"
-};
-firebase.initializeApp(config);
-
 class SearchPage extends Component {
     constructor(props) {
         super(props);
