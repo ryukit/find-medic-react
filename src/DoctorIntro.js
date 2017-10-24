@@ -1,41 +1,29 @@
 import React, { Component } from 'react';
-import DoctorIntroInfo from './DoctorIntroInfo';
 
 class DoctorIntro extends Component {
 
     render() {
-        const doctorIntro = this.props.item.map(function (item) {
-            return <DoctorIntroInfo
-                key={item.key}
-                id={item.id}
-                name={item.name}
-                desc={item.description}
-                rate={item.rate}
-                sex={item.sex}
-                type={item.type}
-                location={item.geo_point}
-                speciality={item.speciality}
-                image={item.featured_image}
-            />
-        }.bind(this));
+
         return(
-            <main className="mainContent pageInner">
-                <div className="container">
+            <div className="card pageInner">
+                <div className="card-content">
                     <div className="row">
-                        <div className="col s12">
-                            {doctorIntro}
+                        <div className="col s12 m2">
+                            <div>
+                                <img src={this.props.image} alt=""/>
+                            </div>
                         </div>
-                    </div>
-                    <div className="row">
-                        <div className="col s12 m4">
-                            sidebar
-                        </div>
-                        <div className="col s12 m4">
-                            doctor info
+                        <div className="col s12 m8">
+                            <p className="card-title grey-text text-darken-4">{this.props.name}</p>
+                            <p>Location: {this.props.location.city}</p>
+                            <p>Speciality: {this.props.speciality}</p>
+                            {/*<p>{this.props.desc}</p>*/}
+                            {/*<p>Sex: {this.props.sex}</p>*/}
+                            {/*<p>LatLng: {this.props.location.lat}, {this.props.location.lng}</p>*/}
                         </div>
                     </div>
                 </div>
-            </main>
+            </div>
         )
     }
 }

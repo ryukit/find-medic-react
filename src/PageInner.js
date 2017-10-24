@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
-import DoctorIntro from './DoctorIntro';
+import DoctorInfo from './DoctorInfo';
 
 class PageInner extends Component {
     constructor(props) {
@@ -42,9 +42,9 @@ class PageInner extends Component {
 
     render() {
         return(
-        <section className="innerPage">
-            <DoctorIntro item={this.state.item} />
-        </section>
+            <main className="mainContent pageInner">
+                <DoctorInfo item={this.state.item} />
+            </main>
         )
     }
 }
