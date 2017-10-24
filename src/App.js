@@ -6,6 +6,7 @@ import {
 import SearchPage from './SearchPage';
 import PageInner from './PageInner';
 import firebase from 'firebase';
+import ContactPage from './ContactPage';
 
 //Initialize Firebase
 let config = {
@@ -37,15 +38,16 @@ class App extends Component {
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
                             <li><Link to='/'>Home</Link></li>
                             <li><Link to='/search'>Search</Link></li>
+                            <li><Link to='/contact'>Contact</Link></li>
                         </ul>
                     </div>
                 </nav>
 
                     <Route exact path='/' component={Home} />
                     <Route path='/search' component={SearchPage} />
-                    {/*<Route path='/doctor/:itemId' component={PageInner} />*/}
                     <Route path='/doctor/:itemId' render={ ({ match }) => <PageInner { ...match.params }/> } />
                     <Route path='/clinic/:itemId' render={ ({ match }) => <PageInner { ...match.params }/> } />
+                    <Route path='/contact' component={ContactPage} />
 
                 <footer className="page-footer">
                     <div className="container">
