@@ -5,19 +5,16 @@ class ContactPage extends Component{
     return (
         <div className="container">
             <div className="row">
-                <Header />
+                <ContentHeader />
                 <ContentBody />
                 <ContactForm />
             </div>
-            <br />
-            <hr />
-            <br />
         </div>
     );
   }
 }
 
-class Header extends Component{
+class ContentHeader extends Component{
   constructor(props){
     super(props);
   }
