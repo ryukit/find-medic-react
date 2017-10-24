@@ -131,6 +131,10 @@ class Label extends Component {
       return (
           <label htmlFor={this.props.htmlFor}>{this.props.label}</label>
       );
+    } else {
+      return (
+          <label></label>
+      );
     }
   }
 }
@@ -162,7 +166,7 @@ class Input extends Component {
   }
 }
 
-class Select extends React.Component {
+class Select extends Component {
   render() {
     // Get all options from option prop
     const selectOptions = this.props.options.split(", ");
@@ -195,7 +199,7 @@ class Select extends React.Component {
   }
 }
 
-class Textarea extends React.Component {
+class Textarea extends Component {
   render() {
     return (
         <div className="row">
