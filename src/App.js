@@ -14,15 +14,6 @@ class Home extends Component {
     }
 }
 
-class Search extends Component {
-    render() {
-        return(
-            <h1>Search</h1>
-        )
-    }
-}
-
-
 class App extends Component {
 
     render() {
@@ -32,15 +23,14 @@ class App extends Component {
                     <div className="nav-wrapper">
                         <a href="#" className="brand-logo">Logo</a>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
-                            <li><a href="sass.html">Sass</a></li>
-                            <li><a href="badges.html">Components</a></li>
-                            <li><a href="collapsible.html">JavaScript</a></li>
+                            <li><Link to='/' activeClassName="active">Home</Link></li>
+                            <li><Link to='/search' activeClassName="active">Search</Link></li>
                         </ul>
                     </div>
                 </nav>
 
-                    <Route exact path="/" component={Home} />
-                    <Route path="/s" component={SearchPage} />
+                    <Route exact path='/' component={Home} />
+                    <Route path='/search' component={SearchPage} />
 
                 <footer className="page-footer">
                     <div className="container">
