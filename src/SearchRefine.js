@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import $ from "jquery";
+//import $ from "jquery";
 
 class SearchRefine extends Component {
 
     componentDidMount() {
-        console.log(this.refs.selectContainer);
+        //console.log(this.refs.selectContainer);
         //debugger;
         // this.$node = $(this.refs.selectContainer);
         // this.$node.material_select();

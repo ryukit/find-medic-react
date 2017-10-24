@@ -1,11 +1,23 @@
 import React, { Component } from 'react';
 import {
     Route,
-    Link,
-    withRouter
+    Link
 } from 'react-router-dom';
 import SearchPage from './SearchPage';
+import PageInner from './PageInner';
+import firebase from 'firebase';
 import ContactPage from './ContactPage';
+
+//Initialize Firebase
+let config = {
+    apiKey: "AIzaSyBrAhKDmDKw-ADDNVEav-jiewM4ltxWXdM",
+    authDomain: "find-medic-test.firebaseapp.com",
+    databaseURL: "https://find-medic-test.firebaseio.com",
+    projectId: "find-medic-test",
+    storageBucket: "find-medic-test.appspot.com",
+    messagingSenderId: "42124904796"
+};
+firebase.initializeApp(config);
 
 class Home extends Component {
     render() {
@@ -22,17 +34,19 @@ class App extends Component {
             <section className="pageLayout">
                 <nav>
                     <div className="nav-wrapper">
-                        <a href="#" className="brand-logo">Logo</a>
+                        <Link to='/' className="brand-logo">Logo</Link>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
-                            <li><Link to='/' activeClassName="active">Home</Link></li>
-                            <li><Link to='/search' activeClassName="active">Search</Link></li>
-                            <li><Link to='/contact' activeClassName="active">Contact</Link></li>
+                            <li><Link to='/'>Home</Link></li>
+                            <li><Link to='/search'>Search</Link></li>
+                            <li><Link to='/contact'>Contact</Link></li>
                         </ul>
                     </div>
                 </nav>
 
                     <Route exact path='/' component={Home} />
                     <Route path='/search' component={SearchPage} />
+                    <Route path='/doctor/:itemId' render={ ({ match }) => <PageInner { ...match.params }/> } />
+                    <Route path='/clinic/:itemId' render={ ({ match }) => <PageInner { ...match.params }/> } />
                     <Route path='/contact' component={ContactPage} />
 
                 <footer className="page-footer">
@@ -45,10 +59,7 @@ class App extends Component {
                             <div className="col l4 offset-l2 s12">
                                 <h5 className="white-text">Links</h5>
                                 <ul>
-                                    <li><a className="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                                    <li><a className="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                                    <li><a className="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                                    <li><a className="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                                    <li><a className="grey-text text-lighten-3" href="/link1">Link 1</a></li>
                                 </ul>
                             </div>
                         </div>

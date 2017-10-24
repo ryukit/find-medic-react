@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+//import PageInner from './PageInner';
+import {
+    Link
+} from 'react-router-dom';
 
 class DoctorItem extends Component {
 
@@ -28,6 +32,13 @@ class DoctorItem extends Component {
             stars_val = 'star star star star star'
         }
 
+        let doctor_item_type = '';
+        if (this.props.type === 'doctor') {
+            doctor_item_type = (<Link to={'/doctor/' + this.props.id}>Read More</Link>);
+        } else if (this.props.type === 'clinic') {
+            doctor_item_type = (<Link to={'/clinic/' + this.props.id}>Read More</Link>);
+        }
+
         return(
             <div className="card doctorList-item">
                 <div className="card-content">
@@ -48,7 +59,9 @@ class DoctorItem extends Component {
                     </div>
                 </div>
                 <div className="card-action">
-                    <a href="#">Read More</a>
+                    {doctor_item_type}
+                    {/*<Route path={'/doctor/' + this.props.id} component={RenderPageInner} />*/}
+                    {/*<Route path={'/doctor/' + this.props.id} render={() => <PageInner />} />*/}
                 </div>
                 <div className="doctorList-item-rate">
                     <span>{this.props.rate}</span>
