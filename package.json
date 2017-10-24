@@ -31,6 +31,7 @@
     "concurrently": "^3.5.0",
     "css-loader": "^0.28.4",
     "google-maps-react": "^1.1.0",
+    "materializecss": "^1.0.11",
     "style-loader": "^0.18.2",
     "webpack": "^2.0.0",
     "webpack-dev-server": "^2.0.0"
@@ -45,11 +46,13 @@
     "react-redux": "^5.0.5",
     "react-router-dom": "^4.1.1",
     "react-router-redux": "^5.0.0-alpha.6",
-    "react-scripts": "0.9.5",
+    "react-scripts": "1.0.14",
     "react-select": "^1.0.0-rc.5",
     "react-transition-group": "^1.2.0",
     "redux": "^3.7.0",
     "redux-thunk": "^2.2.0",
-    "reselect": "^3.0.1"
+    "reselect": "^3.0.1",
+    "firebase": "^4.5.1",
+    "jquery": "^3.2.1"
   }
 }

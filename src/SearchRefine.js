@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
+import $ from "jquery";
 
 class SearchRefine extends Component {
+
+    componentDidMount() {
+        console.log(this.refs.selectContainer);
+        //debugger;
+        // this.$node = $(this.refs.selectContainer);
+        // this.$node.material_select();
+        //$(this.refs.selectContainer).material_select();
+    }
+
 
     render() {
         return(
@@ -8,7 +18,7 @@ class SearchRefine extends Component {
                 <h5 className="center-align">REFINE YOUR SEARCH</h5>
                 <h6 className="center-align">Speciality</h6>
                 <div className="input-field selectItem">
-                    <select name="spec-select" id="spec-select">
+                    <select ref="selectContainer" name="spec-select" id="spec-select">
                         <option value="Pediatrics">Pediatrics</option>
                         <option value="GP">GP</option>
                         <option value="Mental Health">Mental Health</option>
