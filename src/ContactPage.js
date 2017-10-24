@@ -113,9 +113,6 @@ class ContactForm extends Component {
                             className="waves-effect waves-light"
                         />
                         <Button
-                            text="Test"
-                        />
-                        <Button
                             type="reset"
                             value="Reset"
                             text="Reset"
