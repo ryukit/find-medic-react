@@ -5,6 +5,7 @@ import {
     withRouter
 } from 'react-router-dom';
 import SearchPage from './SearchPage';
+import ContactPage from './ContactPage';
 
 class Home extends Component {
     render() {
@@ -25,12 +26,14 @@ class App extends Component {
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
                             <li><Link to='/' activeClassName="active">Home</Link></li>
                             <li><Link to='/search' activeClassName="active">Search</Link></li>
+                            <li><Link to='/contact' activeClassName="active">Contact</Link></li>
                         </ul>
                     </div>
                 </nav>
 
                     <Route exact path='/' component={Home} />
                     <Route path='/search' component={SearchPage} />
+                    <Route path='/contact' component={ContactPage} />
 
                 <footer className="page-footer">
                     <div className="container">
