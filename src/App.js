@@ -29,6 +29,14 @@ class Home extends Component {
 
 class App extends Component {
 
+    componentWillMount() {
+        //console.log('componentWillMount')
+    }
+
+    componentDidMount() {
+        //console.log('componentDidMount')
+    }
+
     render() {
         return(
             <section className="pageLayout">

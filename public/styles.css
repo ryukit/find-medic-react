@@ -52,4 +52,20 @@ img {
 .formActions {
     padding-top: 30px;
 }
+.appointmentBlock-item-book {
+    cursor: pointer;
+    -webkit-transition: .3s all;
+    -moz-transition: .3s all;
+    -ms-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all;
+}
+.appointmentBlock-item-book:hover {
+    background: #049ddd;
+    color: #fff;
+}
+.appointmentBlock-item-book i {
+    vertical-align: middle;
+}
+
 /*AIzaSyB8YZdLwCpE2aS6ks55Opn9oeTz_UNmFWI*/

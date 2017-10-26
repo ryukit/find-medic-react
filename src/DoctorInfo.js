@@ -14,6 +14,7 @@ class DoctorInfo extends Component {
                 rate={item.rate}
                 sex={item.sex}
                 type={item.type}
+                reg_number={item.reg_number}
                 location={item.geo_point}
                 speciality={item.speciality}
                 image={item.featured_image}

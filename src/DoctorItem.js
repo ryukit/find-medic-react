@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import PageInner from './PageInner';
+import RateComponent from './RateComponent';
 import {
     Link
 } from 'react-router-dom';
@@ -7,31 +7,6 @@ import {
 class DoctorItem extends Component {
 
     render() {
-        let stars_val = '';
-        if (this.props.rate === 0) {
-            stars_val = 'star_border star_border star_border star_border star_border'
-        } else if (this.props.rate >= 0.5 && this.props.rate < 1) {
-            stars_val = 'star_half star_border star_border star_border star_border'
-        } else if (this.props.rate >= 1 && this.props.rate < 1.5) {
-            stars_val = 'star star_border star_border star_border star_border'
-        } else if (this.props.rate >= 1.5 && this.props.rate < 2) {
-            stars_val = 'star star_half star_border star_border star_border'
-        } else if (this.props.rate >= 2 && this.props.rate < 2.5) {
-            stars_val = 'star star star_border star_border star_border'
-        } else if (this.props.rate >= 2.5 && this.props.rate < 3) {
-            stars_val = 'star star star_half star_border star_border'
-        } else if (this.props.rate >= 3 && this.props.rate < 3.5) {
-            stars_val = 'star star star star_border star_border'
-        } else if (this.props.rate >= 3.5 && this.props.rate < 4) {
-            stars_val = 'star star star star_half star_border'
-        } else if (this.props.rate >= 4 && this.props.rate < 4.5) {
-            stars_val = 'star star star star star_border'
-        } else if (this.props.rate >= 4.5 && this.props.rate < 5) {
-            stars_val = 'star star star star star_half'
-        } else if (this.props.rate === 5) {
-            stars_val = 'star star star star star'
-        }
-
         let doctor_item_type = '';
         if (this.props.type === 'doctor') {
             doctor_item_type = (<Link to={'/doctor/' + this.props.id}>Read More</Link>);
@@ -63,10 +38,7 @@ class DoctorItem extends Component {
                     {/*<Route path={'/doctor/' + this.props.id} component={RenderPageInner} />*/}
                     {/*<Route path={'/doctor/' + this.props.id} render={() => <PageInner />} />*/}
                 </div>
-                <div className="doctorList-item-rate">
-                    <span>{this.props.rate}</span>
-                    <i className="material-icons">{stars_val}</i>
-                </div>
+                <RateComponent rate={this.props.rate} />
             </div>
         )
     }

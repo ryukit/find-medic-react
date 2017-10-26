@@ -49,9 +49,14 @@ class SearchPage extends Component {
         }.bind(this));
     }
 
+    componentWillMount() {
+        //console.log('componentWillMount')
+    }
+
     componentDidMount() {
         this.loadData(1);
         this.loadAd();
+        //console.log('componentDidMount')
     }
 
     // getInitialState() {
