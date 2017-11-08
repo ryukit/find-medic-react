@@ -22,7 +22,13 @@ firebase.initializeApp(config);
 class Home extends Component {
     render() {
         return(
-            <h1>Home</h1>
+            <div className="container">
+                <div className="row">
+                    <div className="col s12 m4">
+                        <h1>Home</h1>
+                    </div>
+                </div>
+            </div>
         )
     }
 }
@@ -51,11 +57,13 @@ class App extends Component {
                     </div>
                 </nav>
 
+                <main className="mainContent">
                     <Route exact path='/' component={Home} />
                     <Route path='/search' component={SearchPage} />
                     <Route path='/doctor/:itemId' render={ ({ match }) => <PageInner { ...match.params }/> } />
                     <Route path='/clinic/:itemId' render={ ({ match }) => <PageInner { ...match.params }/> } />
                     <Route path='/contact' component={ContactPage} />
+                </main>
 
                 <footer className="page-footer">
                     <div className="container">
