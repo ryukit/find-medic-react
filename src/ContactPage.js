@@ -4,11 +4,11 @@ class ContactPage extends Component{
   render() {
     return (
         <div className="container">
-          <div className="row">
-            <ContentHeader />
-            <ContentBody />
-            <ContactForm />
-          </div>
+            <div className="row">
+              <ContentHeader />
+              <ContentBody />
+              <ContactForm />
+            </div>
         </div>
     );
   }
