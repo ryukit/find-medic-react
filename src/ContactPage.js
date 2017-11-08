@@ -5,9 +5,9 @@ class ContactPage extends Component{
     return (
         <div className="container">
             <div className="row">
-              <ContentHeader />
-              <ContentBody />
-              <ContactForm />
+                <ContentHeader />
+                <ContentBody />
+                <ContactForm />
             </div>
         </div>
     );
