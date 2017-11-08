@@ -3,15 +3,13 @@ import React, { Component } from 'react';
 class ContactPage extends Component{
   render() {
     return (
-        <main className="mainContent">
-          <div className="container">
-            <div className="row">
-              <ContentHeader />
-              <ContentBody />
-              <ContactForm />
-            </div>
+        <div className="container">
+          <div className="row">
+            <ContentHeader />
+            <ContentBody />
+            <ContactForm />
           </div>
-        </main>
+        </div>
     );
   }
 }
