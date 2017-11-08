@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DoctorIntro from './DoctorIntro';
 import DoctorInnerMap from './DoctorInnerMap';
+import BookAppointment from './BookAppointment';
 
 class DoctorInfo extends Component {
 
@@ -21,6 +22,22 @@ class DoctorInfo extends Component {
             />
         }.bind(this));
 
+      const bookAppointment = this.props.item.map(function (item) {
+        return <BookAppointment
+            key={item.key}
+            id={item.id}
+            name={item.name}
+            //desc={item.description}
+            //rate={item.rate}
+            //sex={item.sex}
+            //type={item.type}
+            //reg_number={item.reg_number}
+            location={item.geo_point}
+            //speciality={item.speciality}
+            //image={item.featured_image}
+        />
+      }.bind(this));
+
         return(
             <div className="container">
                 <div className="row">
@@ -32,6 +49,9 @@ class DoctorInfo extends Component {
                     <div className="col s12 m4">
                         <div id="mapInner">
                             <DoctorInnerMap item={this.props.item} />
+                        </div>
+                        <div id="bookAppointment">
+                          {bookAppointment}
                         </div>
                     </div>
                     <div className="col s12 m4">

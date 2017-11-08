@@ -87,7 +87,7 @@ class ContactForm extends Component {
                     type="email"
                 />
                 <Input
-                    hasLabel="true"
+                    activeLabel="active"
                     htmlFor="phone"
                     label="Mobile phone number"
                     placeholder="+125333677778"
@@ -131,6 +131,10 @@ class Label extends Component {
       return (
           <label htmlFor={this.props.htmlFor}>{this.props.label}</label>
       );
+    } else if (this.props.activeLabel === "active") {
+      return (
+          <label className="active" htmlFor={this.props.htmlFor}>{this.props.label}</label>
+      );
     } else {
       return (
           <label></label>
@@ -156,6 +160,7 @@ class Input extends Component {
                     type={this.props.type || "text"}
                 />
                 <Label
+                    activeLabel={this.props.activeLabel}
                     hasLabel={this.props.hasLabel}
                     htmlFor={this.props.htmlFor}
                     label={this.props.label}
