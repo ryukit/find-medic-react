@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-import {
-    Route,
-    Link
-} from 'react-router-dom';
-import SearchPage from './SearchPage';
-import PageInner from './PageInner';
 import firebase from 'firebase';
-import ContactPage from './ContactPage';
+import Routes from './Routes';
+import Links from './Links';
+
 
 //Initialize Firebase
 let config = {
@@ -19,50 +15,22 @@ let config = {
 };
 firebase.initializeApp(config);
 
-class Home extends Component {
-    render() {
-        return(
-            <div className="container">
-                <div className="row">
-                    <div className="col s12 m4">
-                        <h1>Home</h1>
-                    </div>
-                </div>
-            </div>
-        )
-    }
-}
-
 class App extends Component {
-
     componentWillMount() {
         //console.log('componentWillMount')
     }
-
     componentDidMount() {
         //console.log('componentDidMount')
     }
-
     render() {
         return(
             <section className="pageLayout">
                 <nav>
-                    <div className="nav-wrapper">
-                        <Link to='/' className="brand-logo">Logo</Link>
-                        <ul id="nav-mobile" className="right hide-on-med-and-down">
-                            <li><Link to='/'>Home</Link></li>
-                            <li><Link to='/search'>Search</Link></li>
-                            <li><Link to='/contact'>Contact</Link></li>
-                        </ul>
-                    </div>
+                    <Links />
                 </nav>
 
                 <main className="mainContent">
-                    <Route exact path='/' component={Home} />
-                    <Route path='/search' component={SearchPage} />
-                    <Route path='/doctor/:itemId' render={ ({ match }) => <PageInner { ...match.params }/> } />
-                    <Route path='/clinic/:itemId' render={ ({ match }) => <PageInner { ...match.params }/> } />
-                    <Route path='/contact' component={ContactPage} />
+                    <Routes />
                 </main>
 
                 <footer className="page-footer">

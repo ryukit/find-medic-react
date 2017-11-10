@@ -37,22 +37,23 @@
     "webpack-dev-server": "^2.0.0"
   },
   "dependencies": {
+    "firebase": "^4.5.1",
     "history": "^4.6.3",
     "immutable": "^3.8.1",
+    "jquery": "^3.2.1",
     "prop-types": "^15.5.10",
     "react": "^15.5.0",
     "react-day-picker": "^6.0.3",
     "react-dom": "^15.5.0",
+    "react-materialize": "^1.0.17",
     "react-redux": "^5.0.5",
-    "react-router-dom": "^4.1.1",
+    "react-router-dom": "^4.2.2",
     "react-router-redux": "^5.0.0-alpha.6",
     "react-scripts": "1.0.14",
     "react-select": "^1.0.0-rc.5",
     "react-transition-group": "^1.2.0",
     "redux": "^3.7.0",
     "redux-thunk": "^2.2.0",
-    "reselect": "^3.0.1",
-    "firebase": "^4.5.1",
-    "jquery": "^3.2.1"
+    "reselect": "^3.0.1"
   }
 }
