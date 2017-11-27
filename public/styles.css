@@ -36,6 +36,7 @@ img {
 #mapInner {
     position: relative;
     height: 200px;
+    margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 1024px){
@@ -104,3 +105,147 @@ img {
     border-radius: 50%;
 }
 /*AIzaSyB8YZdLwCpE2aS6ks55Opn9oeTz_UNmFWI*/
+
+
+
+
+
+/* BookAppointment.js */
+#bookAppointment {
+    margin-bottom: 2rem;
+}
+.bookAppointment {
+    padding: 20px;
+}
+.radioPad {
+    display: inline-block;
+    width: 25%;
+}
+.nextAvailable .radioPad {
+    width: 100%;
+}
+@media (max-width: 440px) {
+    .radioPad {
+        width: 50%;
+    }
+}
+.radioPad-wrapper {
+    display: block;
+    cursor: pointer;
+    background: #fff;
+    color: #000;
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    padding: .5rem .3rem;
+    text-align: center;
+}
+@media (max-width: 1400px) {
+    .radioPad-wrapper {
+        font-size: 1.2rem;
+    }
+}
+.radioPad-wrapper:hover {
+    background: #eee;
+}
+.radioPad-wrapper:active,
+.radioPad-wrapper--selected {
+    background: #ee6e73;
+    color: #fff;
+}
+.radioPad-radio {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
+.radioPad-radio:checked + span {
+    background: #ee6e73;
+    color: #fff;
+}
+
+
+
+
+/* BookAppointment.js - Modal */
+.modalContainer {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,.5);
+    z-index: -1;
+}
+.modalContainer.is-open {
+    display: block;
+    z-index: 100;
+}
+.modalbBox {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    right: initial;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    min-width: 300px;
+    min-height: 300px;
+    z-index: 1000;
+}
+.modalbBox.is-active {
+    display: block;
+}
+
+
+
+
+
+/* HomePage - Test */
+.col.grid-example {
+    border: 1px solid #eee;
+    margin: 7px 0;
+    text-align: center;
+    line-height: 50px;
+    font-size: 28px;
+    background-color: tomato;
+    color: #fff;
+    padding: 0;
+}
+.toast {
+    top: 0;
+}
+
+
+
+
+
+/* Navigation - Test */
+.nav-wrapper li a.active {
+    background: rgba(0,0,0,.15);
+    font-weight: bold;
+}
+
+
+
+
+
+/* Error - Test */
+.notFound {
+    color: #fff;
+    font-size: 12em;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #ccc,
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+    text-align: center;
+}

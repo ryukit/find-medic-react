@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Input, Row } from 'react-materialize';
+
 
 class ContactPage extends Component{
   render() {
@@ -15,9 +17,6 @@ class ContactPage extends Component{
 }
 
 class ContentHeader extends Component{
-  constructor(props){
-    super(props);
-  }
   render () {
     return (
         <div className="row">
@@ -72,64 +71,69 @@ class ContentBody extends Component{
 class ContactForm extends Component {
     render() {
         return(
-            <form className="col s12 m5 l5 offset-l2 z-depth-1">
-                <Input
-                    hasLabel="true"
-                    htmlFor="username"
-                    label="Name *"
-                    required="true"
-                />
-                <Input
-                    hasLabel="true"
-                    htmlFor="useremail"
-                    label="Email *"
-                    required="true"
-                    type="email"
-                />
-                <Input
-                    hasLabel="true"
-                    htmlFor="phone"
-                    label="Mobile phone number"
-                    placeholder="+125333677778"
-                />
-                <Select
-                    hasLabel="true"
-                    htmlFor="select"
-                    label="Subject"
-                    options="Option 1, Option 2, Option 3"
-                />
-                <Textarea
-                    hasLabel="true"
-                    htmlFor="textarea1"
-                    label="Write here"
-                />
-                <div className="row">
-                    <div className="input-field col s12 center">
-                        <Button
-                            type="submit"
-                            value="Submit"
-                            text="Submit"
-                            name="action"
-                            className="waves-effect waves-light"
-                        />
-                        <Button
-                            type="reset"
-                            value="Reset"
-                            text="Reset"
-                            className="waves-effect"
-                        />
+            <div className="col s12 m5 l5 offset-l2 z-depth-1">
+                <form className="section">
+                    <InputCustom
+                        hasLabel="true"
+                        htmlFor="username"
+                        label="Name *"
+                        required="true"
+                    />
+                    <InputCustom
+                        hasLabel="true"
+                        htmlFor="useremail"
+                        label="Email *"
+                        required="true"
+                        type="email"
+                    />
+                    <InputCustom
+                        activeLabel="active"
+                        htmlFor="phone"
+                        label="Mobile phone number"
+                        placeholder="+125333677778"
+                    />
+                    <SelectCustom
+                        label="Subject"
+                        options="Option 1, Option 2, Option 3"
+                    />
+                    <TextareaCustom
+                        hasLabel="true"
+                        htmlFor="textarea1"
+                        label="Write here"
+                    />
+                    <div className="row">
+                        <div className="input-field col s12 center">
+                            <ButtonCustom
+                                type="submit"
+                                value="Submit"
+                                text="Submit"
+                                name="action"
+                                className="waves-effect waves-light"
+                            />
+                            <ButtonCustom
+                                type="reset"
+                                value="Reset"
+                                text="Reset"
+                                className="waves-effect"
+                            />
+                        </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
+
         )
     }
 }
 
-class Label extends Component {
+class LabelCustom extends Component {
   render() {
     if (this.props.hasLabel === "true") {
       return (
           <label htmlFor={this.props.htmlFor}>{this.props.label}</label>
+      );
+    } else if (this.props.activeLabel === "active") {
+      return (
+          <label className="active" htmlFor={this.props.htmlFor}>{this.props.label}</label>
       );
     } else {
       return (
@@ -139,7 +143,7 @@ class Label extends Component {
   }
 }
 
-class Input extends Component {
+class InputCustom extends Component {
   render() {
     return (
         <div className="row">
@@ -155,7 +159,8 @@ class Input extends Component {
                     step={this.props.step || null}
                     type={this.props.type || "text"}
                 />
-                <Label
+                <LabelCustom
+                    activeLabel={this.props.activeLabel}
                     hasLabel={this.props.hasLabel}
                     htmlFor={this.props.htmlFor}
                     label={this.props.label}
@@ -166,7 +171,7 @@ class Input extends Component {
   }
 }
 
-class Select extends Component {
+class SelectCustom extends Component {
   render() {
     // Get all options from option prop
     const selectOptions = this.props.options.split(", ");
@@ -177,29 +182,25 @@ class Select extends Component {
     });
 
     return (
-        <div className="row">
-            <div className="input-field col s12">
-                <select
-                    defaultValue=""
-                    id={this.props.htmlFor}
-                    name={this.props.name || null}
-                    required={this.props.required || null}
-                >
-                    <option value="" disabled selected>Select a reason</option>
-                    {selectOptionsList}
-                </select>
-                <Label
-                    hasLabel={this.props.hasLabel}
-                    htmlFor={this.props.htmlFor}
-                    label={this.props.label}
-                />
-            </div>
-        </div>
+        <Row>
+            <Input
+                s={12}
+                id={this.props.htmlFor}
+                name={this.props.name || null}
+                required={this.props.required || null}
+                type='select'
+                label={this.props.label}
+                defaultValue={this.props.defaultValue || ''}
+            >
+                <option value="" disabled selected>Select a reason</option>
+                {selectOptionsList}
+            </Input>
+        </Row>
     );
   }
 }
 
-class Textarea extends Component {
+class TextareaCustom extends Component {
   render() {
     return (
         <div className="row">
@@ -212,7 +213,7 @@ class Textarea extends Component {
                     required={this.props.required || null}
                     rows={this.props.rows || null}
                 />
-                <Label
+                <LabelCustom
                     hasLabel={this.props.hasLabel}
                     htmlFor={this.props.htmlFor}
                     label={this.props.label}
@@ -223,10 +224,11 @@ class Textarea extends Component {
   }
 }
 
-class Button extends Component {
+class ButtonCustom extends Component {
   render() {
     return (
         <button
+            onClick={this.props.onClick || null}
             className={
               this.props.className
                   ? `btn ${this.props.className}`

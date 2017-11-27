@@ -68,32 +68,30 @@ class SearchPage extends Component {
 
     render() {
         return(
-            <main className="mainContent">
-                <div className="container">
-                    <div className="row">
-                        <div className="col s12 m4">
-                            <div className="card">
-                                <div className="card-content">
-                                    <div id="map">
-                                        <MapComponent items={this.state.items} />
-                                    </div>
+            <div className="container">
+                <div className="row">
+                    <div className="col s12 m4">
+                        <div className="card">
+                            <div className="card-content">
+                                <div id="map">
+                                    <MapComponent items={this.state.items} />
                                 </div>
-                            </div>
-                            <div className="card">
-                                <div className="card-content">
-                                    <SearchRefine />
-                                </div>
-                            </div>
-                            <div className="card">
-                                <AdComponent banner={this.state.banner} />
                             </div>
                         </div>
-                        <div className="col s12 m8">
-                            <DoctorList items={this.state.items} />
+                        <div className="card">
+                            <div className="card-content">
+                                <SearchRefine />
+                            </div>
+                        </div>
+                        <div className="card">
+                            <AdComponent banner={this.state.banner} />
                         </div>
                     </div>
+                    <div className="col s12 m8">
+                        <DoctorList items={this.state.items} />
+                    </div>
                 </div>
-            </main>
+            </div>
         )
     }
 }
