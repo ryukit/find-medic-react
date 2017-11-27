@@ -5,11 +5,15 @@ class DoctorInterests extends Component {
 
     render() {
         const interestsContent = this.props.item.map(function (item) {
-            let interest_value = item.special_interests.split(";");
-            return interest_value.map(function (val) {
-                return <li>{val}</li>
-            }.bind(this));
+            let interest_value;
+            if( item.special_interests ){
+                interest_value = item.special_interests.split(";");
+                return interest_value.map(function (val) {
+                    return <li>{val}</li>
+                }.bind(this));
+            }
         }.bind(this));
+
 
         return(
             <div className="overviewBlock" id="overview-block">

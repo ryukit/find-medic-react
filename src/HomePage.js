@@ -28,13 +28,7 @@ class HomePage extends Component {
                                     <option value='3'>Option 3</option>
                                 </Input>
                             </Col>
-                            <Col s={4} className='center'>
-                                <Modal
-                                    header='Modal Header'
-                                    trigger={<Button waves='light'>MODAL LINC!<Icon right>insert_chart</Icon></Button>}>
-                                    <a href="https://react-materialize.github.io">https://react-materialize.github.io</a>
-                                </Modal>
-                            </Col>
+
                             <Col s={4}>
                                 <Input name='on' type='date' label="Materialize Organizer" onChange={this.dateOrganizerChange} />
                                 <Toast className="top" toast={this.state.dateOrganizer || 'Please select a date!'}>
@@ -78,13 +72,6 @@ class HomePage extends Component {
                                 </tr>
                                 </tbody>
                             </Table>
-                        </Row>
-                        <Row>
-                            <br />
-                            <br />
-                        </Row>
-                        <Row>
-                            <Pagination className="center" items={10} activePage={2} maxButtons={8} />
                         </Row>
                     </div>
                 </div>

@@ -6,7 +6,7 @@ class DoctorOverview extends Component {
 
     render() {
         const overviewContent = this.props.item.map(function (item) {
-            return <p>{item.overview}</p>
+            return <p key={item.key}>{item.overview}</p>
         }.bind(this));
 
         const overviewShortBox = this.props.item.map(function (item) {

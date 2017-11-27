@@ -53,7 +53,7 @@ class BookAppointment extends Component {
                         options='Option 1, Option 2, Option 3'
                     />
 
-                    <p key={this.props.key} className="valign-wrapper">
+                    <p className="valign-wrapper">
                         <i className="material-icons">location_on</i>
                         <span> Location address: {this.props.location.city}</span>
                     </p>
