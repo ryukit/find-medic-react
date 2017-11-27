@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import RateComponent from './RateComponent';
+import RateComponent from '../../components/rateing';
 import {
     Link
 } from 'react-router-dom';

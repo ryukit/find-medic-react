@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import HomePage from './HomePage';
-import SearchPage from './SearchPage';
+import HomePage from './containers/home-page';
+import SearchPage from './containers/search-page';
 import PageInner from './PageInner';
-import ContactPage from './ContactPage';
+import ContactPage from './containers/contact-page';
 
 
 class Routes extends Component {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DoctorItem from './DoctorItem';
+import DoctorItem from '../../components/doctor-item';
 
 class DoctorList extends Component {
 

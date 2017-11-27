@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
-import DoctorList from './DoctorList';
-import MapComponent from './MapComponent';
-import SearchRefine from './SearchRefine';
-import AdComponent from './AdComponent';
+import DoctorList from '../../components/doctor-listing';
+import MapComponent from '../../MapComponent';
+import SearchRefine from '../../components/search-refine';
+import AdComponent from '../../components/advertisement';
 
 class SearchPage extends Component {
     constructor(props) {

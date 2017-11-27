@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import RateComponent from './RateComponent';
+import RateComponent from './components/rateing';
 
 class DoctorIntro extends Component {
     constructor(props) {
