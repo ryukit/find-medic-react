@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import DoctorIntro from './DoctorIntro';
 import DoctorInnerMap from './DoctorInnerMap';
+import DoctorOverview from './DoctorOverview';
+import DoctorInterests from './DoctorInterests';
+import DoctorLanguage from './DoctorLanguage';
 
 class DoctorInfo extends Component {
 
@@ -34,8 +37,14 @@ class DoctorInfo extends Component {
                             <DoctorInnerMap item={this.props.item} />
                         </div>
                     </div>
-                    <div className="col s12 m4">
-                        doctor info
+                    <div className="col s12 m8">
+                        <div className="card">
+                            <div className="card-content">
+                                <DoctorOverview item={this.props.item} />
+                                <DoctorInterests item={this.props.item} />
+                                <DoctorLanguage item={this.props.item} />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

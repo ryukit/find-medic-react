@@ -67,5 +67,40 @@ img {
 .appointmentBlock-item-book i {
     vertical-align: middle;
 }
-
+.overviewBlock .collection .collection-item{
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 12px;
+}
+.overviewBlock .collection .collection-item span.badge {
+    text-align: right;
+    padding: 0;
+}
+.interestList {
+    font-size: 0;
+    line-height: 0;
+}
+.interestList li {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 20px;
+}
+.interestList li::before {
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    left: 0;
+    top: 50%;
+    content: '';
+    margin-top: -5px;
+    background: #049ddd;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
 /*AIzaSyB8YZdLwCpE2aS6ks55Opn9oeTz_UNmFWI*/
