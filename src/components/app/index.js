@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
-import Routes from '../../Routes';
-import Links from '../../Links';
+import Routes from '../routes';
+import Links from '../navigation';
 
 
 //Initialize Firebase

@@ -3,7 +3,7 @@ import DoctorIntro from './DoctorIntro';
 import DoctorInnerMap from './DoctorInnerMap';
 import DoctorOverview from './DoctorOverview';
 import DoctorInterests from './DoctorInterests';
-import DoctorLanguage from './DoctorLanguage';
+import DoctorLanguage from './components/doctor-language';
 import BookAppointment from './BookAppointment';
 
 class DoctorInfo extends Component {

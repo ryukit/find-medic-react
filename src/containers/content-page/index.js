@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
-import DoctorInfo from './DoctorInfo';
+import DoctorInfo from '../../DoctorInfo';
 
 class PageInner extends Component {
     constructor(props) {

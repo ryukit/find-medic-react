@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DoctorShortBox from './DoctorShortBox';
+import DoctorShortBox from './components/doctor-short-box';
 
 class DoctorOverview extends Component {
 
