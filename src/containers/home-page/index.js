@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Input, Modal, Toast, Button, Icon, Row, Col, Parallax, Table, Pagination} from 'react-materialize'
+import {Input, Toast, Row, Col, Parallax, Table} from 'react-materialize'
 
 class HomePage extends Component {
     constructor(props){
@@ -9,9 +9,11 @@ class HomePage extends Component {
         }
         this.dateOrganizerChange = this.dateOrganizerChange.bind(this)
     }
+
     dateOrganizerChange(event){
         this.setState({dateOrganizer: event.target.value})
     }
+
     render() {
         return(
             <div className="container">

@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-//import $ from "jquery";
 
 class SearchRefine extends Component {
-
     componentDidMount() {
         //console.log(this.refs.selectContainer);
         //debugger;

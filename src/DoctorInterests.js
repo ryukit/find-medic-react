@@ -10,9 +10,9 @@ class DoctorInterests extends Component {
                 interest_value = item.special_interests.split(";");
                 return interest_value.map(function (val) {
                     return <li>{val}</li>
-                }.bind(this));
+                });
             }
-        }.bind(this));
+        })
 
 
         return(

@@ -3,7 +3,6 @@ import firebase from 'firebase';
 import Routes from '../routes';
 import Links from '../navigation';
 
-
 //Initialize Firebase
 let config = {
     apiKey: "AIzaSyBrAhKDmDKw-ADDNVEav-jiewM4ltxWXdM",

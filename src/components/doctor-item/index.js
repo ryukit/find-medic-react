@@ -5,7 +5,6 @@ import {
 } from 'react-router-dom';
 
 class DoctorItem extends Component {
-
     render() {
         let doctor_item_type = '';
         if (this.props.type === 'doctor') {
@@ -27,16 +26,11 @@ class DoctorItem extends Component {
                             <p className="card-title grey-text text-darken-4">{this.props.name}</p>
                             <p>Location: {this.props.location.city}</p>
                             <p>Speciality: {this.props.speciality}</p>
-                            {/*<p>{this.props.desc}</p>*/}
-                            {/*<p>Sex: {this.props.sex}</p>*/}
-                            {/*<p>LatLng: {this.props.location.lat}, {this.props.location.lng}</p>*/}
                         </div>
                     </div>
                 </div>
                 <div className="card-action">
                     {doctor_item_type}
-                    {/*<Route path={'/doctor/' + this.props.id} component={RenderPageInner} />*/}
-                    {/*<Route path={'/doctor/' + this.props.id} render={() => <PageInner />} />*/}
                 </div>
                 <RateComponent rate={this.props.rate} />
             </div>

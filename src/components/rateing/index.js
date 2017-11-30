@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 class RateComponent extends Component {
-
     render() {
         let stars_val = '';
         if (this.props.rate === 0) {

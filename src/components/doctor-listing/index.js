@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import DoctorItem from '../../components/doctor-item';
 
 class DoctorList extends Component {
-
     render() {
         const doctorItem = this.props.items.map(function (item) {
             return <DoctorItem
@@ -17,7 +16,7 @@ class DoctorList extends Component {
                 speciality={item.speciality}
                 image={item.featured_image}
             />
-        }.bind(this));
+        });
         return(
             <section className="doctorList">
                 {doctorItem}

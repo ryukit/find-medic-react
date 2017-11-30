@@ -7,7 +7,7 @@ class DoctorOverview extends Component {
     render() {
         const overviewContent = this.props.item.map(function (item) {
             return <p key={item.key}>{item.overview}</p>
-        }.bind(this));
+        });
 
         const overviewShortBox = this.props.item.map(function (item) {
             return <DoctorShortBox
@@ -17,7 +17,7 @@ class DoctorOverview extends Component {
                 online_consultation={item.online_consultation}
                 min_price_per_appointment={item.min_price_per_appointment}
              />
-        }.bind(this));
+        });
 
         return(
             <div className="overviewBlock" id="overview-block">
